@@ -75,6 +75,8 @@ void detectCollisions()
     
   if( (ballCY - ballR/2 <= 0 ) || (ballCY + ballR/2 >= height) )
     ballDY = -ballDY;
+    
+  /* Collision detection with players to be added here... by Wing */
 }
 void updateBall()
 {
