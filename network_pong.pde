@@ -3,7 +3,6 @@ int LEFT = 1;
 int RIGHT = 2;
 
 
-
 /*Define the ball */
 int ballCX;
 int ballCY;
@@ -68,6 +67,7 @@ void keyPressed()
     loop();
 }
 
+/* collision detection for the game */
 void detectCollisions()
 {
   if( (ballCX - ballR/2 <= 0 ) || (ballCX + ballR/2 >= width) )
