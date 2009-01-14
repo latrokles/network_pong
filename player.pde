@@ -1,4 +1,5 @@
 
+
 public class player
 {
   int centerX;
@@ -19,13 +20,21 @@ public class player
     points = 0;
   }
   
+  public void resetplayer(int pHeight)
+  {
+    centerX = width/2;
+    centerY = pHeight;
+  }
+  
   public void move(int direction)
   {
     if((direction == LEFT) && (centerX - playerWidth > 0))
-      centerX -= playerDX;
-      
-    if((direction == RIGHT) && (centerX - playerWidth < width))
-      centerX += playerDX;
+        centerX -= playerDX;
+            
+    if((direction == RIGHT) && (centerX < width))
+       centerX += playerDX;
+
+
   }
   
   public void score()
@@ -36,6 +45,7 @@ public class player
   public void draw()
   {
     fill(0, 255, 0);
-    rect(centerX - playerWidth/2, centerY - playerHeight/2, playerWidth, playerHeight);
+    rect(centerX - playerWidth, centerY - playerHeight/2, playerWidth, playerHeight);
   }
 }
+ 
